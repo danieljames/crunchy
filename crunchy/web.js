@@ -83,6 +83,12 @@ Crunchy.webInterface = function() {
 
 	// Memory leaktastic.
 	crunch.onclick = function() {
+        output.value = "";
+        compare.innerHTML = "<i>Working....</i>";
+        setTimeout(crunch.go, 0);
+    }
+
+    crunch.go = function() {
 		var src = input.value;
 		src = src.replace(/\r*\n/g, "\n").replace(/\r/g, "\n");
 
